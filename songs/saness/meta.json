@@ -1,6 +1,10 @@
 {
-  "songName": "Example",
+  "songName": "saness",
   "bpm": 250,
   "scrollSpeed": 4,
-  "stage": "black"
+  "stage": "black",
+  "characters": {
+    "opChar": "saness",
+    "plrChar": "boyfriend"
+  }
 }
