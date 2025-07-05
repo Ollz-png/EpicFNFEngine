@@ -1,0 +1,10 @@
+{
+  "songName": "sansational",
+  "bpm": 130,
+  "scrollSpeed": 2,
+  "stage": "hall",
+  "characters": {
+  "opChar": "template",
+  "plrChar": "boyfriend"
+  }
+}
