@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 interface FileList {
@@ -208,7 +209,7 @@ export default function Downloads() {
 
         {fileList.files.map((file) => (
           <li key={file}>
-            <a
+            <Link
               href={`/files/${fileList.currentPath ? fileList.currentPath + "/" : ""}${file}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -216,7 +217,7 @@ export default function Downloads() {
               download
             >
               {file}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

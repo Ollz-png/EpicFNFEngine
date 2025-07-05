@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -9,9 +11,9 @@ export default function Home() {
       </p>
       <ul className="list-disc pl-6 space-y-3 text-cyan-300 font-mono text-lg">
         <li>
-          <a href="/downloads" className="hover:text-white hover:underline transition">
+          <Link href="/downloads" className="hover:text-white hover:underline transition">
             Downloads - download/view the assets of this project!
-          </a>
+          </Link>
         </li>
       </ul>
     </>

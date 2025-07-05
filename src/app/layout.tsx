@@ -1,6 +1,6 @@
 import { Orbitron } from 'next/font/google';
 import './globals.css';  // or '../styles/globals.css' depending on your setup
-
+import Link from "next/link";
 const orbitron = Orbitron({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col font-sans">
         <header className="bg-gradient-to-r from-cyan-500 to-blue-700 shadow-lg p-5">
           <nav className="container mx-auto flex space-x-8 font-mono tracking-wide text-lg">
-            <a href="/" className="hover:text-cyan-300 transition-colors duration-300">
+            <Link href="/" className="hover:text-cyan-300 transition-colors duration-300">
               Home
-            </a>
-            <a href="/downloads" className="hover:text-cyan-300 transition-colors duration-300">
+            </Link>
+            <Link href="/downloads" className="hover:text-cyan-300 transition-colors duration-300">
               Downloads
-            </a>
+            </Link>
           </nav>
         </header>
         <main className="container mx-auto flex-grow p-8">
