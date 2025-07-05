@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FNF Test</title>
+  </head>
+  <body>
+    <button id="play">Play Song</button>
+
+    <script>
+      const playBtn = document.getElementById("play");
+
+      playBtn.addEventListener("click", () => {
+        const audio = new Audio("songs/example/inst.mp3");
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
