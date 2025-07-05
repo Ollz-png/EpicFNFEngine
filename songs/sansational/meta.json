@@ -1,5 +1,6 @@
 {
   "songName": "sansational",
   "bpm": 130,
-  "scrollSpeed": 2
+  "scrollSpeed": 2,
+  "stage": "black"
 }

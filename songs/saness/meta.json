@@ -1,5 +1,6 @@
 {
   "songName": "Example",
   "bpm": 250,
-  "scrollSpeed": 4
+  "scrollSpeed": 4,
+  "stage": "black"
 }
