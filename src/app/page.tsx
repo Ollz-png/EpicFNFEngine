@@ -7,7 +7,7 @@ export default function Home() {
         Epic FNF Engine
       </h1>
       <p className="mb-8 text-gray-300 text-lg max-w-xl">
-        Welcome! This is the website for my FNF Project that I've been working on!
+        Welcome! This is the website for my FNF Project that I&apos;ve been working on!
       </p>
       <ul className="list-disc pl-6 space-y-3 text-cyan-300 font-mono text-lg">
         <li>
