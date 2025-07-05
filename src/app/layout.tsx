@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             <a href="/" className="hover:text-cyan-300 transition-colors duration-300">
               Home
             </a>
-            <a href="/projects" className="hover:text-cyan-300 transition-colors duration-300">
+            <a href="/downloads" className="hover:text-cyan-300 transition-colors duration-300">
               Downloads
             </a>
           </nav>
