@@ -4,7 +4,7 @@
   "scrollSpeed": 3,
   "stage": "hall",
   "characters": {
-  "opChar": "template",
+  "opChar": "chichi",
   "plrChar": "ic-bf"
   }
 }
