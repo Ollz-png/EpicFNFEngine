@@ -10,12 +10,16 @@ assignees: ''
 **Feature / Asset Description**
 Describe the song, chart, character, stage, or engine feature you want added. Include as much detail as possible.
 
+**Is this a suggestion or a request?**
+- [x] Suggestion
+- [x] Request
+
 **Type of Contribution**
-- [ ] Song / Chart
-- [ ] Character / Sprite
-- [ ] Stage / Background
-- [ ] Engine / Code Feature
-- [ ] Other (please specify)
+- [x] Song / Chart
+- [x] Character / Sprite
+- [x] Stage / Background
+- [x] Engine / Code Feature
+- [x] Other (please specify)
 
 **Folder / Location**
 Where should this go in the repo?  
