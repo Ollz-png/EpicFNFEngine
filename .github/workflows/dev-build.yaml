@@ -1,0 +1,30 @@
+name: Dev Build
+
+on:
+  push:
+    branches:
+      - main  # or any branch you want dev builds on
+
+jobs:
+  dev-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt || echo "No dependencies"
+
+      - name: Repack Project.pmp
+        run: python scripts/repack_pmp.py
+
+      - name: Upload .pmp as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Project-pmp-dev
+          path: Project.pmp

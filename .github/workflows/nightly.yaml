@@ -20,6 +20,17 @@ jobs:
         id: date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt || echo "No dependencies"
+
+      - name: Repack Project.pmp
+        run: python scripts/repack_pmp.py
+
       - name: Zip the public/files folder
         run: zip -r files.zip public/files
 
