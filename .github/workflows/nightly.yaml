@@ -1,4 +1,9 @@
-name: Nightly Release with Files and Cleanup
+name: Nightly Release
+
+permissions:
+  contents: write
+  packages: write
+
 
 on:
   schedule:
