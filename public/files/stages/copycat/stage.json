@@ -1,0 +1,14 @@
+{
+    "bfPosition": {
+        "x": 150,
+        "y": -100
+    },
+    "opponentPosition": {
+        "x": -150,
+        "y": -100
+    },
+    "stageScale": {
+        "x": 1,
+        "y": 1
+    }
+}
