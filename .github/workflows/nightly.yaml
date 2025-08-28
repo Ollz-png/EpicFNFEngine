@@ -3,8 +3,7 @@ name: Nightly Release
 permissions:
   contents: write
   packages: write
-
-
+  
 on:
   schedule:
     - cron: "0 0 * * *"  # daily at midnight UTC
