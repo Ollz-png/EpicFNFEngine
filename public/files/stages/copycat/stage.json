@@ -1,11 +1,11 @@
 {
     "bfPosition": {
-        "x": 150,
+        "x": 300,
         "y": -100
     },
     "opponentPosition": {
-        "x": -150,
-        "y": -100
+        "x": 0,
+        "y": -80
     },
     "stageScale": {
         "x": 0.75,
