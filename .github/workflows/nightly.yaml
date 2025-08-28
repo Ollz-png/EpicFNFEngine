@@ -3,7 +3,7 @@ name: Nightly Release
 permissions:
   contents: write
   packages: write
-  
+
 on:
   schedule:
     - cron: "0 0 * * *"  # daily at midnight UTC
@@ -35,6 +35,7 @@ jobs:
           files: |
             Project.pmp
             files.zip
+          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
