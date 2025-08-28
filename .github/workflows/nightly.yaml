@@ -1,4 +1,4 @@
-name: Nightly Release with Files and Cleanup
+name: Nightly Release
 
 on:
   schedule:
