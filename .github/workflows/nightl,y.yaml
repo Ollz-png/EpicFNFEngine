@@ -1,0 +1,51 @@
+name: Nightly Release with Files and Cleanup
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # daily at midnight UTC
+  workflow_dispatch:      # manual trigger allowed
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set current date
+        id: date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Zip the public/files folder
+        run: zip -r files.zip public/files
+
+      - name: Publish nightly release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: nightly-${{ env.DATE }}
+          name: Nightly Build (${{ env.DATE }})
+          body: |
+            Nightly build of engine.
+            Commit: ${{ github.sha }}
+            Date: ${{ env.DATE }}
+          files: |
+            Project.pmp
+            files.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  cleanup:
+    needs: nightly
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cleanup old nightly releases
+        run: |
+          OLD=$(date -d '30 days ago' +'%Y-%m-%d')
+          gh api repos/${{ github.repository }}/releases \
+            --jq '.[] | select(.tag_name | startswith("nightly-")) | select(.tag_name < "nightly-'$OLD'") | .id' \
+            | while read id; do
+                echo "Deleting release id $id"
+                gh api --method DELETE repos/${{ github.repository }}/releases/$id
+              done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
