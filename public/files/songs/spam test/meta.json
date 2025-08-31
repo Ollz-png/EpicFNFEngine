@@ -1,0 +1,10 @@
+{
+  "songName": "spam test",
+  "bpm": 98.75,
+  "scrollSpeed": 3,
+  "stage": "copycat",
+  "characters": {
+  "opChar": "template",
+  "plrChar": "ic-bf"
+  }
+}
